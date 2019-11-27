@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.cardService.getCardData().subscribe(res => {
-          console.log(res);
           this.cardData = res;
     })
   }
