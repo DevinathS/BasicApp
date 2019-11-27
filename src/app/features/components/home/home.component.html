@@ -1,0 +1,8 @@
+<div class="card-align">
+<div *ngFor="let data of cardData">
+<app-card [name]=data.name [subtitle]=data.subtitle [description]=data.description (likeToEmit)=handleLikeEvent(event)></app-card>
+</div>
+<mat-toolbar>
+<mat-toolbar-row>Liked : {{likedCounter}}  <button mat-raised-button color="accent" (click)=resetCounter()>RESET</button></mat-toolbar-row>
+</mat-toolbar>
+</div>
